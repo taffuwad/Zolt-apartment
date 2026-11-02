@@ -107,8 +107,8 @@
 
     <main id="top">
       <!-- ==================== HERO (framed, inset in dark green) ==================== -->
-      <section id="hero" class="relative bg-forest ">
-        <div id="hero-frame" class="relative  w-full   h-[100svh]" >
+      <section id="hero" class="relative bg-forest">
+        <div id="hero-frame" class="relative w-full">
           <img
             id="hero-img"
             src="assets/HeroBgImage.jpg"
@@ -118,8 +118,8 @@
           />
           <div class="absolute inset-0 bg-gradient-to-b from-forest/45 via-forest/5 to-forest/70"></div>
 
-          <div class="relative z-10 flex h-full flex-col justify-end px-5 pb-8 md:px-10 md:pb-10">
-            <div class="hero-fade mb-5 flex flex-wrap items-center gap-2">
+          <div class="hero-content relative z-10 flex flex-col justify-end px-5 md:px-10">
+            <div class="hero-fade mb-4 flex flex-wrap items-center gap-2 sm:mb-5">
               <span class="inline-flex items-center gap-1.5 rounded-full bg-forest/40 px-3.5 py-1.5 text-[11px] uppercase tracking-[0.18em] backdrop-blur-md">
                 <i data-lucide="map-pin" class="h-3.5 w-3.5"></i> Graz · Historic Old Town
               </span>
@@ -128,13 +128,13 @@
               </span>
             </div>
 
-            <h1 class="font-serif font-medium leading-[0.98] tracking-tight" style="font-size: clamp(2.7rem, 7.6vw, 7.4rem);">
-              <span class="hero-line"><span>Boutique Apartments</span></span>
-              <span class="hero-line"><span>in the <em class="font-normal italic text-cream">Historic Center</em></span></span>
+            <h1 class="hero-heading font-serif font-medium leading-[0.98] tracking-tight">
+              <span class="hero-line"><span>Boutique<br class="sm:hidden"> Apartments</span></span>
+              <span class="hero-line"><span>in the<br class="sm:hidden"> <em class="font-normal italic text-cream">Historic Center</em></span></span>
               <span class="hero-line"><span>of Graz</span></span>
             </h1>
 
-            <div class="hero-fade mt-7 flex flex-wrap items-end justify-between gap-6">
+            <div class="hero-fade mt-5 flex flex-wrap items-end justify-between gap-4 sm:mt-7 sm:gap-6">
               <p class="max-w-md text-[15px] leading-relaxed text-cream/85">
                 Nine personally designed apartments in Graz's old town — old-building charm,
                 quiet minimalism and warm coziness, hosted by Moritz.

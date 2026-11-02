@@ -106,12 +106,30 @@ h1,h2{
 }
 
 /* ---------- Hero ---------- */
+#hero-frame {
+  min-height: 100svh;
+  min-height: 100dvh;
+}
+.hero-content {
+  box-sizing: border-box;
+  min-height: 100svh;
+  min-height: 100dvh;
+  padding-bottom: max(2rem, env(safe-area-inset-bottom));
+}
+.hero-heading {
+  font-size: clamp(1.8rem, 9vw, 7.4rem);
+}
 .hero-line {
   display: block;
   overflow: hidden;
 }
 .hero-line > span {
   display: block;
+}
+@media (min-width: 768px) {
+  .hero-content {
+    padding-bottom: max(2.5rem, env(safe-area-inset-bottom));
+  }
 }
 
 /* ---------- Manifesto word reveal (JS enhances; CSS keeps text readable) ---------- */
