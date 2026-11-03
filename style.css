@@ -38,7 +38,7 @@ h1,h2{
   font-display: swap; /* Improves performance */
 }
 @font-face {
-  font-family: 'main2';
+  font-family: 'mainsec';
   src: url('assets/font/ppneuemontreal-thin.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
