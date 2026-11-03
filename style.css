@@ -28,6 +28,23 @@ img {
 h1,h2{
     text-transform: uppercase;
 }
+
+
+@font-face {
+  font-family: 'main';
+  src: url('assets/font/Aylia\ DEMO.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Improves performance */
+}
+@font-face {
+  font-family: 'main2';
+  src: url('assets/font/ppneuemontreal-thin.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; /* Improves performance */
+}
+
 /* ---------- Preloader ---------- */
 #preloader {
   position: fixed;
@@ -78,6 +95,7 @@ h1,h2{
   transition:
     background 0.5s ease,
     backdrop-filter 0.5s ease;
+  mix-blend-mode: difference;
 }
 #site-header.scrolled .nav-shell {
   background: none;
@@ -109,6 +127,13 @@ h1,h2{
 #hero-frame {
   min-height: 100svh;
   min-height: 100dvh;
+  background: linear-gradient(
+    to bottom,
+    rgba(31, 41, 35, 0.45) 0%,
+    rgba(31, 41, 35, 0.05) 50%,
+    rgba(31, 41, 35, 0.70) 100%
+  ),url("assets/main-images/HeroBgImage.jpg") center/cover no-repeat;
+
 }
 .hero-content {
   box-sizing: border-box;
@@ -118,6 +143,11 @@ h1,h2{
 }
 .hero-heading {
   font-size: clamp(1.8rem, 9vw, 7.4rem);
+  color: #F8F5EF;
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.28),
+    0 4px 16px rgba(0, 0, 0, 0.22),
+    0 10px 30px rgba(0, 0, 0, 0.12);
 }
 .hero-line {
   display: block;

@@ -580,7 +580,7 @@
       var frame = card.querySelector(".apt-frame");
       gsap.fromTo(
         frame,
-        { clipPath: "inset(16% 9% 16% 9% round 10px)" },
+        { clipPath: "inset(45% 69% 66% 9% round 10px)" },
         {
           clipPath: "inset(0% 0% 0% 0% round 6px)",
           ease: "none",
