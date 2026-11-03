@@ -166,6 +166,9 @@ h1,h2{
 .mword {
   opacity: 0.14;
 }
+.split-word {
+  display: inline-block;
+}
 
 /* ---------- Apartment cards ---------- */
 .apt-card .apt-img {

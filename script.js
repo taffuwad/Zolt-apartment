@@ -509,6 +509,33 @@
       .from("#site-header", { y: -24, opacity: 0, duration: 0.9 }, 0.4);
   }
 
+  function splitWords(el) {
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    var textNodes = [];
+
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+    textNodes.forEach(function (node) {
+      var parts = node.nodeValue.match(/\S+|\s+/g);
+      if (!parts) return;
+
+      var fragment = document.createDocumentFragment();
+      parts.forEach(function (part) {
+        if (/^\s+$/.test(part)) {
+          fragment.appendChild(document.createTextNode(part));
+        } else {
+          var word = document.createElement("span");
+          word.className = "split-word";
+          word.textContent = part;
+          fragment.appendChild(word);
+        }
+      });
+      node.parentNode.replaceChild(fragment, node);
+    });
+
+    return el.querySelectorAll(".split-word");
+  }
+
   if (hasST && !reduced) {
     /* Hero: parallax zoom-out from ~1.15 on scroll */
     gsap.fromTo(
@@ -541,6 +568,18 @@
 
     /* Generic reveals */
     gsap.utils.toArray(".reveal").forEach(function (el) {
+      if (el.matches("h2")) {
+        gsap.from(splitWords(el), {
+          y: -100,
+          opacity: 0,
+          duration: 0.9,
+          stagger: 0.055,
+          ease: "power3.out",
+          scrollTrigger: { trigger: el, start: "top 88%" },
+        });
+        return;
+      }
+
       gsap.from(el, {
         y: 44,
         opacity: 0,
